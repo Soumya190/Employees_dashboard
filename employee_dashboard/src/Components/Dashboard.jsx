@@ -83,12 +83,12 @@ const Dashboard = () => {
     <>
       <div className="grid gap-[2rem] bg-[#3c493f] py-3 px-4">
         <div className="flex justify-between">
-          <div className="grid">
-            <h1 className="text-4xl  font-bold text-left">
+          <div className="grid gap-3">
+            <h1 className="text-4xl text-white font-bold text-left">
               Employees Dashboard
             </h1>
             <div className="w-full ">
-              <p className="whitespace-normal text-wrap text-left">
+              <p className="whitespace-normal text-white text-wrap text-left">
                 Welcome to Employees Dashboard, here you can search the Employee
                 by their ID.
                 <br /> It will list all the necessary details of the Employee.
@@ -189,7 +189,14 @@ const Dashboard = () => {
         {dataitem ? (
           <>
             <div
-              className="h-[20rem] grid place-content-evenly bg-gradient-to-r from-[#78847c] to-[#b3bfb8] items-center w-[20rem] text-black rounded"
+              className="h-[20rem] w-[20rem]
+  grid place-content-evenly items-center
+  bg-gradient-to-r from-[#78847c] to-[#b3bfb8]
+  text-black rounded-lg
+  shadow-lg
+  hover:shadow-2xl
+  transition-shadow duration-300
+  p-6"
               value={searchItem}
             >
               <Link
@@ -232,7 +239,14 @@ const Dashboard = () => {
                   className="no-underline text-white"
                 >
                   <div
-                    className={`h-[20rem] w-[20rem] grid place-content-center bg-[#78847c] items-center text-white rounded-xl border-4 ${
+                    className={`h-[20rem] w-[20rem]
+  grid place-content-evenly items-center
+  bg-gradient-to-r from-[#78847c] to-[#b3bfb8]
+  text-black rounded-lg
+  shadow-lg
+  hover:shadow-2xl
+  transition-shadow duration-300
+  p-6 ${
                       isSelected ? "border-[#f0f7f4]" : "border-transparent"
                     }`}
                   >
@@ -251,7 +265,7 @@ const Dashboard = () => {
                       >
                         Delete
                       </button>
-                      <button className="bg-white h-[3rem] w-[5rem] rounded-xl text-black">
+                      <button className="bg-white h-[3rem] w-[5rem] rounded-xl text-black" onClick={(e)=>{e.preventDefault()}}>
                         Edit
                       </button>
                     </div>
