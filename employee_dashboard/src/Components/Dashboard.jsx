@@ -103,7 +103,7 @@ const Dashboard = () => {
                 onChange={(e) => {
                   setSearchItem(e.target.value);
                 }}
-                className="h-[2.3rem] w-[15rem] text-black border-2xl border-2 rounded"
+                className="h-[2.3rem] w-[15rem] text-white border-2xl border-2 rounded "
               />
               {displayederror && (
                 <p className="text-red-600">{displayederror}</p>
@@ -111,7 +111,7 @@ const Dashboard = () => {
             </div>
             <button
               onClick={handleButton}
-              className="h-10 w-20 rounded-md bg-black text-white"
+              className="h-10 w-20 rounded-md bg-white text-black"
             >
               Search
             </button>
