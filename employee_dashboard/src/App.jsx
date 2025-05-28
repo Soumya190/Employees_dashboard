@@ -9,12 +9,10 @@ import EmployeeDetails from "./pages/EmployeeDetails";
 function App() {
   return (
     <>
-      {/* <BrowserRouter> */}
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/employeeDetails/:id" element={<EmployeeDetails />} />
         </Routes>
-      {/* </BrowserRouter> */}
     </>
   );
 }

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import React from "react";
+import { Link } from "react-router-dom";
 
 const EmployeeDetails = () => {
   const [dataitem, setDataItem] = useState(null);
@@ -35,6 +36,13 @@ const EmployeeDetails = () => {
 
   return (
     <div className="grid place-content-center items-center bg-[#3c493f] h-screen">
+      <Link to="/">
+      <button
+          className="mt-4 px-4 py-2 bg-[#3c493f] hover:bg-[#2e3a30] rounded-lg text-white font-semibold"
+        >
+          Go Back
+        </button>
+        </Link>
         <div className="h-[20rem] w-[20rem] grid place-content-center  bg-[#78847c] items-center text-white rounded-xl border-4">
       {dataitem ? (
         <>
@@ -47,7 +55,7 @@ const EmployeeDetails = () => {
           </div>
         </>
       ) : (
-        <div>Employees data is not listed</div>
+        <div>Error fetching the data </div>
       )}
     </div>
     </div>
